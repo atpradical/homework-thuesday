@@ -1,8 +1,6 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from 'react'
 import Greeting from './Greeting'
 import {UserType} from './HW3'
-import {Simulate} from "react-dom/test-utils";
-import error = Simulate.error;
 
 type GreetingContainerPropsType = {
     users: UserType[] // need to fix any
@@ -44,8 +42,13 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     const [error, setError] = useState<string>('') // need to fix any
 
     const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => { // need to fix any
-        setName(e.currentTarget.value) // need to fix
-        error && setError('Ошибка! Введите имя!')
+        setName(e.currentTarget.value.trim())
+
+        if (e.currentTarget.value.length) {
+            setError('')
+        } else {
+            error && setError('Ошибка! Введите имя!')
+        }
     }
 
     const addUser = () => {
