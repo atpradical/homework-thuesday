@@ -3,6 +3,7 @@ import burgerIcon from './burger.svg'
 import s from './Header.module.css'
 import {useLocation} from 'react-router-dom'
 import {PATH} from '../Pages'
+import {logDOM} from "@testing-library/react";
 
 type PropsType = {
     handleOpen: () => void
