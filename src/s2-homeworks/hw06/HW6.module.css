@@ -1,5 +1,16 @@
 .buttonsContainer {
+    display: inline-flex;
+    padding: 5px 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .editableSpanContainer {
+    color: #0080FF;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }

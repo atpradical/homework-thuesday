@@ -1,11 +1,41 @@
 .spanBlock {
+    display: flex;
+    width: 276px;
+    height: 36px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 0;
 }
 
 .span {
+    color: #0080FF;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 .input {
+    display: flex;
+    width: 276px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 .pen {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
 }
