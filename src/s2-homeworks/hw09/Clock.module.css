@@ -1,14 +1,44 @@
 .buttonsContainer {
+    display: inline-flex;
+    padding: 5px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    /*font-family: Montserrat, sans-serif;*/
+    /*font-size: 14px;*/
+    /*font-style: normal;*/
+    /*font-weight: 600;*/
+    /*line-height: 20px; !* 142.857% *!*/
+}
+.buttonsContainer button:disabled {
+    opacity: .4;
+    background-color: #d7717d;
+    color: white
 }
 
+
 .clock {
+
 }
 
 .watch {
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .watch strong {
 }
 
 .more {
+    color: rgba(0, 0, 0, 0.50);
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
