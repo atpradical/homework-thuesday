@@ -1,3 +1,9 @@
 .loader {
     /*свг и/или анимация*/
+    background-image: url(../hw10/Ellipse.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 90px;
+    width: 90px;
 }
