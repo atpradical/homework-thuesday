@@ -13,11 +13,13 @@
     --background: #212A34;
 }
 
-html {
+.blockStyles {
     background-color: var(--background);
     color: var(--color);
 }
 
 .select {
-
+    /*background-color: var(--background);*/
+    /*color: var(--color);*/
 }
+
