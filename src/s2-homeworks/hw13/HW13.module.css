@@ -1,7 +1,13 @@
 .buttonsContainer {
+    display: flex;
+    gap: 25px;
 }
-
 .responseContainer {
+    width: 95vw;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    margin: 90px 0;
 }
 
 .imageContainer {
@@ -14,9 +20,31 @@
 }
 
 .code {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat, serif;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 37px;
+    letter-spacing: 0;
+    text-align: left;
 }
 
 .text {
+    color: rgb(58, 2, 117);
+    font-family: Montserrat, serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: left;
 }
 .info {
+    /*color: rgb(0, 0, 0);*/
+    font-family: Montserrat, serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #1E90FF;
 }
