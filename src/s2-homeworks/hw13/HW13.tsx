@@ -37,7 +37,7 @@ const HW13 = () => {
                 setCode('Код 200!')
                 setImage(success200)
                 // дописать
-                setText('...всё ок')
+                setText('...всё ок)')
                 setInfo('код 200 - обычно означает что скорее всего всё ок)')
 
             })
@@ -55,7 +55,6 @@ const HW13 = () => {
                         setText('Ты не отправил success в body вообще!')
                         setInfo('ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!')
                     } else {
-                        console.log("RENDER")
                         setCode('Error!')
                         setImage(errorUnknown)
                         setText('Network Error')
@@ -83,7 +82,7 @@ const HW13 = () => {
                     </SuperButton>
                     <SuperButton
                         id={'hw13-send-false'}
-                        onClick={send(false)}
+                        onClick={send(undefined)}
                         xType={'secondary'}
                         // дописать
                         disabled={info === '...loading'}
@@ -92,7 +91,7 @@ const HW13 = () => {
                     </SuperButton>
                     <SuperButton
                         id={'hw13-send-undefined'}
-                        onClick={send(undefined)}
+                        onClick={send(false)}
                         xType={'secondary'}
                         // дописать
                         disabled={info === '...loading'}
