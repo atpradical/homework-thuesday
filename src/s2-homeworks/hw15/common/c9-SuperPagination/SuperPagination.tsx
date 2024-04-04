@@ -1,6 +1,6 @@
-import React from 'react'
+import React, {ChangeEvent} from 'react'
 import SuperSelect from '../../../hw07/common/c5-SuperSelect/SuperSelect'
-import {Pagination} from '@mui/material'
+import {Box, createTheme, Pagination, ThemeProvider} from '@mui/material'
 import s from './SuperPagination.module.css'
 
 export type SuperPaginationPropsType = {
@@ -11,20 +11,26 @@ export type SuperPaginationPropsType = {
     onChange: (page: number, count: number) => void
 }
 
-const SuperPagination: React.FC<SuperPaginationPropsType> = (
-    {
-        page, itemsCountForPage, totalCount, onChange, id = 'hw15',
-    }
-) => {
-    const lastPage = 10 // пишет студент // вычислить количество страниц
+const SuperPagination: React.FC<SuperPaginationPropsType> = ({
+                                                                 page,
+                                                                 itemsCountForPage,
+                                                                 totalCount,
+                                                                 onChange,
+                                                                 id = 'hw15',
+                                                             }) => {
+    // const lastPage = 10 // пишет студент // вычислить количество страниц
+    const lastPage = Math.ceil(totalCount / itemsCountForPage)
 
     const onChangeCallback = (event: any, page: number) => {
         // пишет студент
+        onChange(page, itemsCountForPage)
     }
 
-    const onChangeSelect = (event: any) => {
+    const onChangeSelect = (event: ChangeEvent<HTMLSelectElement>) => {
         // пишет студент
+        onChange(page, +event.currentTarget.value)
     }
+
 
     return (
         <div className={s.pagination}>
@@ -32,7 +38,13 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
                 id={id + '-pagination'}
                 sx={{
                     // стили для Pagination // пишет студент
+                    '& button.Mui-selected ': {
+                        bgcolor: '#0066CC',
+                        borderRadius: '2px',
+                        color: 'white',
+                    },
                 }}
+                // color="primary" shape="rounded"
                 page={page}
                 count={lastPage}
                 onChange={onChangeCallback}
@@ -40,9 +52,7 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
                 hidePrevButton
             />
 
-            <span className={s.text1}>
-                показать
-            </span>
+            <span className={s.text1}>показать</span>
 
             <SuperSelect
                 id={id + '-pagination-select'}
@@ -55,9 +65,7 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
                 onChange={onChangeSelect}
             />
 
-            <span className={s.text2}>
-                строк в таблице
-            </span>
+            <span className={s.text2}>строки в таблице</span>
         </div>
     )
 }

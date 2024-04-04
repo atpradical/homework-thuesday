@@ -1,11 +1,26 @@
 .pagination {
     display: flex;
+    gap: 5px;
+    align-items: center;
+    margin: 5px;
 }
 
 .text1 {
-
+    color: rgb(13, 11, 12);
+    font-family: Roboto, serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0;
+    text-align: left;
 }
 
 .text2 {
-
+    color: rgb(13, 11, 12);
+    font-family: Roboto, serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0;
+    text-align: left;
 }
